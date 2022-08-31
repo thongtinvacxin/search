@@ -95,12 +95,12 @@ function initTableData() {
 	
     //Data from an json ?
     $.getJSON("Data.txt", function(responseData) {
-    	table = $('#example').DataTable({
+    	$('#example').DataTable({
 	responsive: true,
     	processing: true,
     	data: responseData,
     	columns:[
-    		{data.STT: "STT"},
+    		{data.STT : "STT"},
           {"title":"TÊN VẮC XIN"},
           {"title":"NSX"},
           {"title":"PHÒNG BỆNH"},
