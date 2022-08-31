@@ -34,6 +34,7 @@
             <table id="example" class="table table-bordered  display nowrap" cellspacing="0" width="100%">
                 <thead>
                     <tr id="list-header">
+			<th></th>
                         <th>STT</th>
                         <th>NSX</th>
                         <th>PHÒNG BỆNH</th>
@@ -52,7 +53,8 @@
               <tbody></tbody>
                 <tfoot id="list-header">
                     <tr>
-                        <th>STT</th>
+                        <th></th>
+			<th>STT</th>
                         <th>NSX</th>
                         <th>PHÒNG BỆNH</th>
                         <th>GIÁ</th>
@@ -97,7 +99,7 @@ function initTableData() {
 	responsive: true,
     	processing: true,
     	data: responseData,
-    	columns:[
+    	columns:[{ "title": "" },
     	  { "title": "STT" },
           {"title":"TÊN VẮC XIN"},
           {"title":"NSX"},
