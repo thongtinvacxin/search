@@ -93,11 +93,50 @@
 
       
     <script>
-    $(document).ready(function() {
-        $('#example').DataTable({
-            responsive: true
-        });
-    } );  
+    $(document).ready(function () {
+    var table = $('#example').DataTable({
+        ajax: '../Data.json',
+        columns: [
+            {
+                className: 'dt-control',
+                orderable: false,
+                data: null,
+                defaultContent: '',
+            },
+            { data: 'STT' },		
+    		{ data: 'TÊN VẮC XIN' },
+    		{ data: 'NSX' },
+    		{ data: 'PHÒNG BỆNH' },
+    		{ data: 'GIÁ' },
+        { data: 'SỐ MŨI TIÊM' }, 
+        { data: 'THÔNG TIN VẮC XIN' },
+        { data: 'ĐỐI TƯỢNG' },
+        { data: 'Phác đồ, lịch tiêm' },                            
+        { data: 'Điều kiện trước tiêm' },
+        { data: 'Khoảng cách với các vắc xin khác' },   
+        { data: 'Phản ứng sau tiêm chủng' },
+        { data: 'Các câu hỏi thường gặp' }, 
+        { data: 'HÌNH ẢNH' },   
+        ],
+        order: [[1, 'asc']],
+    });
+ 
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.dt-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+ 
+        if (row.child.isShown()) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            // Open this row
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
+});
     
     </script>
       
