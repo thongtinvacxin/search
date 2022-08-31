@@ -91,7 +91,6 @@
     <!-- my js -->
     
     <script>
-      var table;
 function initTableData() {
 	
     //Data from an json ?
@@ -120,7 +119,7 @@ function initTableData() {
     }).fail(function() {
     	alert( "Cannot get data from URL" );
     });
-}
+};
 
 $(document).ready(function (){
 	initTableData();
