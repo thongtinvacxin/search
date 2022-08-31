@@ -98,8 +98,8 @@ function initTableData() {
     //Data from an json ?
     $.getJSON("./Data.txt", function(responseData) {
     	table = $('#example').DataTable({
-	responsive: true
-    	"processing": true,
+	responsive: true,
+    	processing: true,
     	data: responseData,
     	columns:[
     		{ data: 'STT' },		
