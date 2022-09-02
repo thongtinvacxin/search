@@ -98,48 +98,48 @@ $(document).ready(function (){
 	responsive: true,
     	processing: true,
     	columns:[
-    	  { "title": "STT" },
-          {"title":"TÊN VẮC XIN"},
-          {"title":"NSX"},
-          {"title":"PHÒNG BỆNH"},
-          {"title":"GIÁ (NGHÌN ĐỒNG)"},
-          {"title":"SỐ MŨI TIÊM"},
-          {"title":"THÔNG TIN VẮC XIN",
+    	  { data: "STT" },
+          { data: "TÊN VẮC XIN"},
+          { data: "NSX"},
+          { data: "PHÒNG BỆNH"},
+          { data: "GIÁ (NGHÌN ĐỒNG)"},
+          { data: "SỐ MŨI TIÊM"},
+          { data: "THÔNG TIN VẮC XIN",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"ĐỐI TƯỢNG",
+          { data: "ĐỐI TƯỢNG",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"PHÁC ĐỒ, LỊCH TIÊM",
+          { data: "PHÁC ĐỒ, LỊCH TIÊM",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"ĐIỀU KIỆN TRƯỚC TIÊM",
+          { data: "ĐIỀU KIỆN TRƯỚC TIÊM",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"KHOẢNG CÁCH VỚI CÁC VẮC XIN KHÁC",
+          { data: "KHOẢNG CÁCH VỚI CÁC VẮC XIN KHÁC",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"PHẢN ỨNG SAU TIÊM CHỦNG",
+          { data: "PHẢN ỨNG SAU TIÊM CHỦNG",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"CÂU HỎI THƯỜNG GẶP",
+          { data: "CÂU HỎI THƯỜNG GẶP",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
                             },
           },
-          {"title":"HÌNH ẢNH",
+          { data: "HÌNH ẢNH",
             render: function(data, type, row, meta){
               return '<img src="' + data + '" class="avatar" width="400" height="300" /></a>';         
             }
