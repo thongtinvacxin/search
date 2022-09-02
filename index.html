@@ -93,14 +93,12 @@
     <!-- my js -->
     
     <script>
-function initTableData() {
-	
-    //Data from an json ?
-    $.getJSON("Data.txt", function(responseData) {
-    	$('#example').DataTable({
+
+$(document).ready(function (){
+	var table = $('#example').DataTable({
+		ajax: 'Data.txt';
 	responsive: true,
     	processing: true,
-    	data: responseData,
     	columns:[{ "title": "" },
     	  { "title": "STT" },
           {"title":"TÊN VẮC XIN"},
@@ -150,13 +148,6 @@ function initTableData() {
           },
     	]
     	});
-    }).fail(function() {
-    	alert( "Cannot get data from URL" );
-    });
-}
-
-$(document).ready(function (){
-	initTableData();
 	$("#list-header").on({
 		mouseenter: function() {
 			$(this).css("background-color", "lightgray");
