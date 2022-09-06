@@ -156,7 +156,12 @@ $(document).ready(function (){
           },
     	]
     	});
-	
+	$('#example').dataTable().yadcf([
+		{column_number : 0},
+	    {column_number : 1},
+	    {column_number : 2},
+	    {column_number : 3, text_data_delimiter: ",", filter_type: "auto_complete"},
+	    {column_number : 4}]);
 	$("#searchInput").autocomplete({
         source: data,
         minLength: 1,
