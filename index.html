@@ -159,19 +159,7 @@ $(document).ready(function (){
 	$('#example').dataTable().yadcf([
 		
 	    {column_number : 1, data: "TÊN VẮC XIN", text_data_delimiter: ",", filter_type: "auto_complete"}]);
-	$("#searchInput").autocomplete({
-        source: data,
-        minLength: 1,
-        select: function(event, ui) {
-            $("#searchInput").val(ui.item.value);
-            $("#userID").val(ui.item.id);
-        }
-    }).data("ui-autocomplete")._renderItem = function( ul, item ) {
-    return $( "<li class='ui-autocomplete-row'></li>" )
-        .data( "item.autocomplete", item )
-        .append( item.label )
-        .appendTo( ul );
-    };
+	
 	
 	$("#list-header").on({
 		mouseenter: function() {
