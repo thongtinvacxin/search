@@ -16,9 +16,6 @@
     
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
-	  <!-- jQuery UI library -->
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     
     <title>TRA CỨU</title>
 
@@ -28,13 +25,9 @@
     }
     </style>
   </head>
-  <body style="background-image: url('background.jpg');">
+  <body>
     <h1 class="text-center">TRA CỨU</h1>    
-    <!-- Autocomplete input field -->
-<input id="searchInput" placeholder="Enter member name..." autocomplete="off">
-
-<!-- Hidden input to store selected user's ID -->  
-<input type="hidden" id="userID" name="userID" value=""/>
+    
     <div class="container">
        <div class="row">
            <div class="col-lg-12">
@@ -153,20 +146,6 @@ $(document).ready(function (){
           },
     	]
     	});
-	
-	$("#searchInput").autocomplete({
-        source: data,
-        minLength: 1,
-        select: function(event, ui) {
-            $("#searchInput").val(ui.item.value);
-            $("#userID").val(ui.item.id);
-        }
-    }).data("ui-autocomplete")._renderItem = function( ul, item ) {
-    return $( "<li class='ui-autocomplete-row'></li>" )
-        .data( "item.autocomplete", item )
-        .append( item.label )
-        .appendTo( ul );
-    };
 	
 	$("#list-header").on({
 		mouseenter: function() {
